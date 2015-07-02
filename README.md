@@ -1,0 +1,2 @@
+# excuseme
+Excuse generator tool
