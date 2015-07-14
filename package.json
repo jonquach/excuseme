@@ -1,0 +1,19 @@
+{
+  "name": "excuseme",
+  "version": "1.0.0",
+  "description": "Excuse generator tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonquach/excuseme.git"
+  },
+  "author": "Jonathan Quach <kwach.yami@gmail.com> (http://jonathanquach.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonquach/excuseme/issues"
+  },
+  "homepage": "https://github.com/jonquach/excuseme#readme"
+}
