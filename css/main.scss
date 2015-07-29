@@ -1,4 +1,4 @@
-/* Excuse me main.scss */
+/* Excuse me main.css */
 
 body {
     font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -7,12 +7,37 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: #444;
+    /*background-color: ;*/
     overflow: hidden;
 }
 
 h1 {
     font-size: 44px;
     font-weight: 300;
+}
+
+footer {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #BBBBBB;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -ms-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+    &:link,
+    &:visited {
+        color: #999999;
+    }
+    &:hover {
+        color: #444444;
+    }
 }
 
 .table {

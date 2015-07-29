@@ -11,6 +11,10 @@ node_modules
 # Emacs
 *~
 
+# Source map
+*.css.map
+*.js.map
+
 # Mac OS
 .DS_Store
 .DS_Store?
