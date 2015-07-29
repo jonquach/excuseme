@@ -1,2 +1,5 @@
 # excuseme
-Excuse generator tool
+
+Excuse generator !
+
+http://excuseme.io
