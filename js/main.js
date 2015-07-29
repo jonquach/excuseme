@@ -55,9 +55,9 @@ $(document).ready(function() {
 
         console.log(sorry);
 
-        // $(".excuse h1").fadeOut(1000);
-        $(".excuse h1").text(sorry);
-        // $(".excuse h1").fadeIn(1000);
+        $(".excuse h1").fadeOut(function() {
+            $(this).text(sorry).fadeIn();
+        });
     };
 });
 
