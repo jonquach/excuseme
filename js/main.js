@@ -1,5 +1,19 @@
 // Excuse me main.js
 
+(function () {
+    $('.social').on('click', function () {
+        return $('.share').toggleClass('active');
+    });
+    new GetShare({
+        root: $('.twitter'),
+        network: 'twitter',
+        share: {
+            url: 'http://excuseme.io/',
+            message: 'Excuse Generator - http://excuseme.io'
+        }
+    });
+}.call(this));
+
 $(document).ready(function() {
 
     var excuseme,
@@ -39,8 +53,6 @@ $(document).ready(function() {
         }
     });
 
-    console.log(excuseme);
-
     var generateExcuse = function () {
 
         var leadIn = randomGenerator(excuseme.leadIn.length),
@@ -58,7 +70,36 @@ $(document).ready(function() {
         $(".excuse h1").fadeOut(function() {
             $(this).text(sorry).fadeIn();
         });
-    };
-});
 
-console.log("Sorry, still WIP");
+        $(".twitter-tweet-button").click(function() {
+            var other = '" – Generate excuse on ',
+                encodeText = encodeURIComponent('"' + $("h1").html() + other),
+                encodeJ = encodeURIComponent("Jonathan_quach_"),
+                encodeT = encodeURIComponent("thanhtran32"),
+                width = 550,
+                height = 400,
+                top = ($(window).height() - height) / 2;
+                left = ($(window).width() - width) / 2;
+
+            var opts = 'status=1' +
+                       ',width=' + width +
+                       ',height=' + height +
+                       ',top=' + top +
+                       ',left=' + left;
+
+            window.open("http://twitter.com/share?url=&text=" + encodeText +
+                        "&related=" + encodeJ + "," + encodeT, "twitter", opts);
+        });
+    };
+
+    $(document).keyup(function(e) {
+        if (e.keyCode === 32 || e.keyCode === 82) {
+            reloadAnimation();
+            generateExcuse();
+        } else if (e.keyCode === 84) {
+            $(".twitter-tweet-button").click();
+        } else if (e.keyCode === 83) {
+            $(".twitter-share-button").click();
+        }
+    });
+});
