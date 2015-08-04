@@ -72,7 +72,7 @@ $(document).ready(function() {
         });
 
         $(".twitter-tweet-button").click(function() {
-            var other = '" – Generate excuse on ',
+            var other = '" – Generate excuse on',
                 encodeText = encodeURIComponent('"' + $("h1").html() + other),
                 encodeJ = encodeURIComponent("Jonathan_quach_"),
                 encodeT = encodeURIComponent("thanhtran32"),
