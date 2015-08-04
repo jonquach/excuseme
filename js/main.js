@@ -103,5 +103,3 @@ $(document).ready(function() {
         }
     });
 });
-
-console.log("Sorry, still WIP");
