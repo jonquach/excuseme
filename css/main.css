@@ -41,6 +41,101 @@ a:hover {
     color: #444444;
 }
 
+/* Share button */
+
+label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.share {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+.share > div {
+  float: left;
+}
+
+.getshare input[type="checkbox"] {
+  display: none;
+}
+
+.getshare-counter:before {
+  content: '';
+  height: 20px;
+  display: inline-block;
+  background-position: 0% 30%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.share .twitter {
+  -webkit-transform: translateX(30px);
+  -moz-transform: translateX(30px);
+  -o-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  margin-right: 20px;
+}
+
+.share.active .twitter {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+
+.twitter .getshare-counter:before {
+  background-image: url("/svg/twitter.svg");
+  -webkit-background-size: 16px;
+  -moz-background-size: 16px;
+  background-size: 16px;
+  width: 22px;
+}
+
+.getshare-counter {
+  color: #808080;
+  line-height: 20px;
+  height: 20px;
+  display: inline-block;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.getshare-counter:hover {
+  color: #red;
+}
+
+.social {
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  background: url("/svg/share.svg") no-repeat center center;
+  -webkit-background-size: 22px;
+  -moz-background-size: 22px;
+  background-size: 22px;
+  position: relative;
+  z-index: 9999;
+}
+
 .table {
     width: 100%;
     height: 100%;
@@ -103,4 +198,13 @@ a:hover {
 
 .reload svg path {
     fill: #111;
+}
+
+.sub-action {
+    margin-top: 33px;
+    color: #999999;
+}
+
+.twitter-tweet-button {
+    color: #666666;
 }
